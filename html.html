@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabonete de Lavanda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\User\Desktop\sabonete lavanda\imagens\logo lavanda.png" alt="logo">
+            <img src="C:\Users\User\Desktop\sabonete lavanda\imagens\plantacao lavanda.jpeg" alt="platacao lavanda">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#product">Produto</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><a href="#cart">Carrinho <span id="cart-count">(0)</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="banner-text">
+            <h2>Relaxamento e Pureza em Cada Uso</h2>
+            <p>Experimente o nosso sabonete artesanal de lavanda e transforme seu banho em um momento de paz e tranquilidade.</p> 
+             <p>  A lavanda, com seu aroma suave e envolvente, é conhecida por suas propriedades calmantes e relaxantes. Ela não apenas limpa a pele, mas também acalma a mente, proporcionando uma sensação de paz e equilíbrio. Cada vez que você utiliza nosso sabonete, é como se estivesse permitindo um instante de fuga do agito do dia a dia, mergulhando em um oásis de bem-estar
+                Os ingredientes naturais escolhidos a dedo garantem que sua pele seja tratada com carinho. A combinação de óleo essencial de lavanda com outros componentes hidratantes proporciona uma limpeza suave, mantendo a umidade da pele.
+                Transforme seu banho em um ritual de autocuidado. Ao usar nosso sabonete de lavanda, você não está apenas cuidando da sua pele, mas também da sua alma. Deixe que a pureza e a tranquilidade da lavanda envolvam você, tornando cada banho uma verdadeira celebração ao relaxamento e ao bem-estar.</p>
+            
+            <button onclick="scrollToProduct()">Ver Produtos</button>
+        </div>
+    </section>
+
+    <section id="product">
+        <h2>Nossos Produtos</h2>
+        <div class="product-container">
+            <img src="C:\Users\User\Desktop\sabonete lavanda\imagens\sabonete lavanda 3.jpeg" alt="sabonete lavanda 3.jpeg" id="product-img">
+            <div class="product-details">
+                <h3>Sabonete Artesanal de Lavanda</h3>
+                <p>Feito com ingredientes naturais e óleo essencial de lavanda, ideal para hidratar a pele e acalmar os sentidos. Vegano e sustentável.</p>
+                <p><strong>R$ 15,00</strong></p>
+                <div class="quantity">
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" value="1" min="1">
+                </div>
+                <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>Somos um grupo de estudantes do 2º ano do ensino médio, empenhados em realizar um projeto de empreendedorismo que tem nos desafiado desde o início. Escolha o produto certo foi uma das etapas mais difíceis da jornada. Depois de muitas discussões e reflexões, decidimos pelo sabonete de lavanda, não apenas por suas fragrâncias suaves, mas pelos seus benefícios significativos.</p>
+
+        <p>  A lavanda é conhecida por promover bem-estar, relaxamento e equilíbrio. Ela traz serenidade em meio ao caos do cotidiano, e sentimos que esses são valores importantes que transmitiríamos através de nosso produto. Queremos que cada uso de nossos sabonetes ofereça uma experiência de cuidado pessoal, um momento de pausa para o autocuidado.</p>
+            
+        <p>  Cada sabonete é feito à mão com ingredientes naturais e com muito cuidado, refletindo nosso compromisso com a qualidade e o meio ambiente. Este projeto representa nossa dedicação, não apenas como jovens empreendedores, mas como pessoas que acreditam na importância de cuidar do corpo e do meio ambiente.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form id="contact-form" onsubmit="return validarFormulario()">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+        <p id="form-feedback"></p>
+    </section>
+
+    <section id="cart">
+        <h2>Seu Carrinho</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total">Total: R$ 0,00</p>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Produto adicionado ao carrinho com sucesso!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Sabonetes de Lavanda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="C:\Users\User\Desktop\sabonete lavanda\java.js"></script>
+</body>
+</html>
